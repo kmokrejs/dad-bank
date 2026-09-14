@@ -3,6 +3,7 @@
 .idea/
 *.iml
 *.swp
+.vscode/
 
 # Java
 target/
