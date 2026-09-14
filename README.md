@@ -6,7 +6,7 @@ parent approves or refuses. The point is that every abstract banking word (balan
 interest, savings) becomes something the kid can actually do.
 
 ```
-backend/   Spring Boot 3 (Java 21, Maven) · SQLite · JWT
+backend/   Spring Boot 3 (Java 21, Maven wrapper) · SQLite · JWT
 frontend/  React 19 + TypeScript (Vite) · React Query · plain CSS with design tokens
 ```
 
@@ -173,8 +173,11 @@ src/
     ui/         Button, Field, MoneyField, Card, Dialog, Table, Alert, Badge, Stat, Spinner
     layout/     AppShell (signed-in pages), AuthLayout (login/register)
   pages/        route components; they compose features, they never call fetch
+  auth/         RequireAuth route guard (role-aware)
+  lib/          the React Query client and its retry policy
   styles/       tokens.css (the whole look) + base.css (reset + a few utilities)
   i18n/         en.json, cs.json, t()
+  money.ts      cents <-> display: formatMoney, parseMoney, validateAmount, formatRate, formatDate
 ```
 
 Conventions worth keeping (also in [`src/components/README.md`](frontend/src/components/README.md)):
@@ -284,7 +287,8 @@ class per flow:
 `./mvnw -Pquality verify` adds SpotBugs on top. The compiler runs with `-Xlint:all -Werror`, so a warning
 fails the build.
 
-The frontend has no test runner yet (see below); `npm run build` type-checks and `npm run lint` runs oxlint.
+The frontend has no test runner yet (see below). `npm run typecheck` runs `tsc` on its own, `npm run build`
+type-checks and bundles, and `npm run lint` runs oxlint.
 
 ---
 
