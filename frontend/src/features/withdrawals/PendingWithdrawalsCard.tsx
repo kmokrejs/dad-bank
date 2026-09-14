@@ -18,7 +18,7 @@ export function PendingWithdrawalsCard() {
   const columns: Column<WithdrawalView>[] = [
     { key: 'who', header: t('admin.user'), render: (w) => <><strong>{w.username}</strong><div className="text-sm muted">{formatDate(w.createdAt)}</div></> },
     { key: 'what', header: t('withdraw.what'), render: (w) => w.note ?? <span className="muted">—</span> },
-    { key: 'amount', header: t('admin.balance'), align: 'right', render: (w) => <strong>{formatMoney(w.amountCents)}</strong> },
+    { key: 'amount', header: t('withdraw.amount'), align: 'right', render: (w) => <strong>{formatMoney(w.amountCents)}</strong> },
     {
       key: 'actions', header: '', align: 'right', render: (w) => (
         <div className="row" style={{ justifyContent: 'flex-end' }}>

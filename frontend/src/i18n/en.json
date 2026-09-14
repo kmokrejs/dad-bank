@@ -50,7 +50,7 @@
     "recipientFormat": "Account numbers look like DB-1234-5678-9012",
     "recipientSelf": "You can't send money to yourself",
     "amountRequired": "Enter an amount",
-    "amountFormat": "Enter an amount like 50 or 12,50",
+    "amountFormat": "Enter an amount like 50 or 12.50",
     "amountTooHigh": "You only have {balance}",
     "passwordShort": "At least {min} characters",
     "passwordMismatch": "Passwords do not match"
@@ -110,7 +110,8 @@
   "common": {
     "loading": "Loading…",
     "close": "Close",
-    "error": "Something went wrong"
+    "error": "Something went wrong",
+    "amountPlaceholder": "0.00"
   },
   "savings": {
     "offerTitle": "Start saving!",
@@ -130,8 +131,8 @@
     "current": "Current rate (per year)",
     "since": "Since {date}, set by {by}",
     "newRate": "New rate (% per year)",
-    "rateHint": "0–100, up to 2 decimals, e.g. 2,5",
-    "rateFormat": "Enter a rate like 2,5",
+    "rateHint": "0–100, up to 2 decimals, e.g. 2.5",
+    "rateFormat": "Enter a rate like 2.5",
     "set": "Set rate",
     "history": "Rate changes",
     "empty": "No rate set yet — savings earn 0 % until you set one.",
@@ -139,7 +140,8 @@
     "rateCol": "Rate",
     "setBy": "Set by",
     "note": "Note",
-    "notePlaceholder": "Why the change?"
+    "notePlaceholder": "Why the change?",
+    "ratePlaceholder": "2.5"
   },
   "withdraw": {
     "title": "Ask for cash",
@@ -162,6 +164,7 @@
     "rejectTitle": "Refuse {name}'s request",
     "reasonLabel": "Why not? (the kid will see this)",
     "reasonPlaceholder": "Not this week, you just bought…",
-    "reasonRequired": "Please give a reason"
+    "reasonRequired": "Please give a reason",
+    "amount": "Amount"
   }
 }

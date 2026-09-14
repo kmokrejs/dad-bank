@@ -110,7 +110,8 @@
   "common": {
     "loading": "Načítám…",
     "close": "Zavřít",
-    "error": "Něco se pokazilo"
+    "error": "Něco se pokazilo",
+    "amountPlaceholder": "0,00"
   },
   "savings": {
     "offerTitle": "Začni spořit!",
@@ -139,7 +140,8 @@
     "rateCol": "Úrok",
     "setBy": "Nastavil",
     "note": "Poznámka",
-    "notePlaceholder": "Proč se mění?"
+    "notePlaceholder": "Proč se mění?",
+    "ratePlaceholder": "2,5"
   },
   "withdraw": {
     "title": "Požádat o hotovost",
@@ -162,6 +164,7 @@
     "rejectTitle": "Zamítnout žádost: {name}",
     "reasonLabel": "Proč ne? (dítě to uvidí)",
     "reasonPlaceholder": "Tenhle týden ne, zrovna sis koupil…",
-    "reasonRequired": "Zadej prosím důvod"
+    "reasonRequired": "Zadej prosím důvod",
+    "amount": "Částka"
   }
 }

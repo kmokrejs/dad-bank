@@ -39,7 +39,7 @@ export function InterestSection() {
           {current && <p className="text-sm muted">{t('interest.since', { date: formatDate(current.createdAt), by: current.setBy })}</p>}
         </div>
         <form className="interest__form stack" onSubmit={onSubmit} noValidate>
-          <Field label={t('interest.newRate')} value={rate} onChange={(e) => setRateInput(e.target.value)} inputMode="decimal" placeholder="2,5" hint={t('interest.rateHint')} error={rateError ?? setRate.error?.errors.rateBps} required />
+          <Field label={t('interest.newRate')} value={rate} onChange={(e) => setRateInput(e.target.value)} inputMode="decimal" placeholder={t('interest.ratePlaceholder')} hint={t('interest.rateHint')} error={rateError ?? setRate.error?.errors.rateBps} required />
           <Field label={t('interest.note')} value={note} onChange={(e) => setNote(e.target.value)} maxLength={140} placeholder={t('interest.notePlaceholder')} />
           {setRate.isError && !setRate.error.errors.rateBps && <Alert>{setRate.error.message}</Alert>}
           <div><Button type="submit" loading={setRate.isPending}>{t('interest.set')}</Button></div>
