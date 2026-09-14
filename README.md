@@ -10,6 +10,20 @@ backend/   Spring Boot 3 (Java 21, Maven wrapper) · SQLite · JWT
 frontend/  React 19 + TypeScript (Vite) · React Query · plain CSS with design tokens
 ```
 
+## Screenshots
+
+Running with `VITE_LOCALE=en` and a seeded demo family.
+
+| A kid's dashboard | Where the money went |
+| --- | --- |
+| [![Kid dashboard](docs/screenshots/dashboard.png)](docs/screenshots/dashboard.png) | [![Transaction history](docs/screenshots/history.png)](docs/screenshots/history.png) |
+| Balance, savings with the current rate, and cash requests with their status. | The ledger per account, main or savings, newest first. |
+
+| The parent's view | Signing in |
+| --- | --- |
+| [![Admin](docs/screenshots/admin.png)](docs/screenshots/admin.png) | [![Login](docs/screenshots/login.png)](docs/screenshots/login.png) |
+| Cash requests waiting for a decision, the savings rate and its change log, and every account. | Kids register themselves; the parent account is seeded. |
+
 ---
 
 ## Quick start
