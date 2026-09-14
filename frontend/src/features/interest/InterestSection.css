@@ -1,0 +1,5 @@
+.interest { display: grid; gap: var(--space-5); grid-template-columns: 1fr 1fr; align-items: start; }
+.interest__form { max-width: 360px; }
+.interest__history { margin-top: var(--space-5); }
+.interest__history-title { font-size: var(--text-md); margin-bottom: var(--space-2); }
+@media (max-width: 640px) { .interest { grid-template-columns: 1fr; } }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Optional: pins the build to Java 21 no matter which JDK is first on PATH.
+
+  Copy this file to toolchains.xml, set jdkHome to your JDK 21, and the `jdk-toolchain`
+  Maven profile activates itself (it is triggered by the file's existence). To have every
+  `mvn` invocation pick it up without passing -t, also create .mvn/maven.config containing:
+
+      -t
+      toolchains.xml
+
+  Both toolchains.xml and .mvn/maven.config are gitignored because jdkHome is machine-specific.
+  Without them the build just uses the JDK you run it with, which must be 21 or newer.
+-->
+<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0">
+  <toolchain>
+    <type>jdk</type>
+    <provides>
+      <version>21</version>
+    </provides>
+    <configuration>
+      <!-- macOS/Homebrew: /opt/homebrew/opt/openjdk@21 · Linux: /usr/lib/jvm/java-21-openjdk -->
+      <jdkHome>/opt/homebrew/opt/openjdk@21</jdkHome>
+    </configuration>
+  </toolchain>
+</toolchains>

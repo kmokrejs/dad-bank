@@ -1,0 +1,27 @@
+# OS / editor
+.DS_Store
+.idea/
+*.iml
+*.swp
+
+# Java
+target/
+*.class
+
+# Node
+node_modules/
+dist/
+*.log
+
+# Machine-specific build config (see backend/toolchains.xml.example)
+backend/toolchains.xml
+backend/.mvn/maven.config
+
+# downloaded by ./mvnw on first run, not committed
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Local data & secrets (never commit these)
+*.db
+*.db-journal
+.env.local
+.env.*.local

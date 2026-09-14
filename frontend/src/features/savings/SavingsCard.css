@@ -1,0 +1,7 @@
+.savings--offer { border-style: dashed; border-color: var(--color-border-strong); box-shadow: none; }
+.savings__offer { display: flex; gap: var(--space-4); align-items: flex-start; }
+.savings__pig { font-size: 2.5rem; line-height: 1; }
+.savings__title { font-size: var(--text-lg); margin: 0; }
+.savings__rate { font-size: var(--text-sm); font-weight: 700; color: var(--color-primary); background: var(--color-primary-soft); padding: var(--space-1) var(--space-3); border-radius: 999px; white-space: nowrap; }
+.savings__body { display: grid; gap: var(--space-3); }
+.savings__actions { flex-wrap: wrap; }

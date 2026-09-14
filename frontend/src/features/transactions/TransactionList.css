@@ -1,0 +1,12 @@
+.txlist__rows { list-style: none; margin: 0; padding: 0; }
+.txlist__row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+.txlist__row:last-child { border-bottom: none; }
+.txlist__icon { flex: none; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--color-surface-muted); font-size: 1.15rem; }
+.txlist__main { min-width: 0; flex: 1; }
+.txlist__desc { font-weight: 500; }
+.txlist__meta { overflow-wrap: anywhere; }
+.txlist__amount { font-weight: 600; white-space: nowrap; }
+.txlist__amount--in { color: var(--color-success); }
+.txlist__amount--out { color: var(--color-text); }
+.txlist__pager { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding-top: var(--space-4); }
+.txlist[aria-busy="true"] { opacity: 0.6; }

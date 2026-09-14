@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:sqlite:${DADBANK_DB_PATH:./data/dadbank.db}
+    driver-class-name: org.sqlite.JDBC
+    hikari:
+      # SQLite allows one writer at a time; a single pooled connection avoids SQLITE_BUSY errors.
+      maximum-pool-size: 1
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        type:
+          preferred_instant_jdbc_type: TIMESTAMP
+
+dadbank:
+  jwt:
+    # Must be >= 32 bytes. Override with DADBANK_JWT_SECRET in any real deployment.
+    secret: ${DADBANK_JWT_SECRET:change-me-please-this-is-a-dev-only-secret-key-1234}
+    expiration-minutes: ${DADBANK_JWT_EXPIRATION_MINUTES:720}
+  admin:
+    email: ${DADBANK_ADMIN_EMAIL:dad@dadbank.local}
+    username: ${DADBANK_ADMIN_USERNAME:dad}
+    password: ${DADBANK_ADMIN_PASSWORD:dad12345}
+  cors:
+    allowed-origins: ${DADBANK_CORS_ORIGINS:http://localhost:5173}
+
+logging:
+  level:
+    org.hibernate.SQL: warn

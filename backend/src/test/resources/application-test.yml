@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    # fresh file per test run; in-memory SQLite would give every pooled connection its own DB
+    url: jdbc:sqlite:${java.io.tmpdir}/dadbank-test-${random.uuid}.db
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+dadbank:
+  admin:
+    username: testadmin
+    email: testadmin@dadbank.local
+    password: testadmin123

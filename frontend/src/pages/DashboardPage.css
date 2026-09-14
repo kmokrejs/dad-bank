@@ -1,0 +1,4 @@
+.dashboard__grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.dashboard__hello h1 { margin: 0; }
+.dashboard__send { margin-top: var(--space-4); }
+.dashboard__scope { margin-bottom: var(--space-4); }

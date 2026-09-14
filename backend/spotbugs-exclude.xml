@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter xmlns="https://github.com/spotbugs/filter/3.0.0">
+  <!--
+    Findings suppressed here are noise for a Spring Boot / JPA codebase, not bugs we
+    are choosing to live with. Keep this file short and justified.
+  -->
+
+  <!--
+    Defensive-copy warnings. They fire on every record (AccountDto, PageResponse,
+    ErrorResponse), on @ConfigurationProperties records, on entity getters that must
+    hand back the managed instance, and on constructor-injected Spring beans. Copying
+    in any of those places would break JPA change tracking or Spring wiring.
+  -->
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/>
+  </Match>
+
+  <!--
+    JwtService validates its secret length in the constructor and throws if it is too
+    short. Failing fast at startup is exactly what we want; the "finalizer attack"
+    this pattern warns about does not apply to a final-field Spring singleton.
+  -->
+  <Match>
+    <Class name="dev.dadbank.auth.JwtService"/>
+    <Bug pattern="CT_CONSTRUCTOR_THROW"/>
+  </Match>
+</FindBugsFilter>
